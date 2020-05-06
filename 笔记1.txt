@@ -115,4 +115,12 @@
        点击图片 跳转 网址 可以这样写
        <a href="http://www.baidu.com"> <img src="C:\Users\acer\Pictures\Camera Roll\123.jpg"  width="600"/> </a>
        
-       
+       打开方式 target
+       默认 _self 在当前标签页打开
+       打开新的标签页 _blank 
+
+    6, 注释标签
+       <!--  注释  ---> 约定在 上方添加注释0000000000
+
+       注释 快捷键 CTRL + ？ 要先选中文本的
+
