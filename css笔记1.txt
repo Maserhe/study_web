@@ -1,0 +1,173 @@
+1 ,html 满足不了设计者需求
+   html 操作麻烦
+
+   html 专注去做结构呈现
+   css 去做样式
+   css 网页化妆师
+
+   css 设置html版面布局和外观显示样式
+
+   约定 css使用小写
+
+2 , 行内式
+    style 属性来设置的
+    例如
+    <h1 style="color: blue; font-size: 18px ;">ahdjfajd</h1>
+    color
+    font
+
+    缺点 ：没有实现结构样式分离，少用
+
+3，内部样式
+    放在head 中  ,理论上<style> </style>可以放在任何地方
+    例如
+    <style>
+		h2 {
+			color: green;
+			font-size: 20px;
+		}
+		h4 {
+			color: purple;
+		}
+		p {
+			color: blue;
+		}
+	</style>
+    例如
+    <style>
+        tr{
+            height: 40px;;
+        }
+    </style>
+
+4，外部样式表  完全分离
+    将所有样式 写在css文件中
+    实现样式共享
+    <link rel="stylesheet" type="text/css" href="styLe.css" />
+
+5， 样式规则
+
+    选择器 {  属性  值； 属性 值； 。。。。}
+    例如
+    h1 { color:pink ; }
+
+6,  css选择器的作用
+    找到特定HTML元素 ，把我们想要的标签选中
+
+7， css基础选择器
+
+    1，标签选择器
+
+    2，类选择器  ,使用class调用 ，谁用谁调用
+    在一个标签内部只能有一个 class
+
+    类名{  //要符合命名规范
+
+        属性 值；
+        属性 值；
+        。。。。
+    }
+    3,特殊用法 -- 多类名
+
+    <span class="blue font100"> G</span>
+
+    4,id选择器
+    #pink{
+        color: red;
+    }
+    id= "pink"
+    元素的id是唯一的，全国唯一的，不得重复只能使用一次
+
+    和类选择器最大不同就在使用次数上
+
+    5，通配符选择器 
+
+    选择所有标签  ，不推荐使用
+    * {
+        属性 属性值；
+        属性 值；
+        。。。。
+    }
+
+8，font字体
+    font-size 字体大小
+    推荐像素单位 px
+    相对长度 px , em
+    绝对长度 几乎用不上 不写了
+
+    让统一浏览器 设置 字体 大小 
+    body{
+        font-size: 16px;
+    }
+    .title{
+        font-size: 20px;
+    }
+
+    font-family:字体
+    例如：
+    font-family: "微软雅黑"
+
+    英文字体不加引号 ，有空格还是要加引号 ，不区分大小写
+
+    .title{  多个字体用英文逗号 分隔开 ，如果浏览器不支持第一种 就回选用第二种
+        font-family :Arial , "黑体" ,"Micsoft YaHei" }
+    }
+
+9, unicode字体  
+    字体自己去查表，对应的字体 ，别忘加引号
+
+10，font-weight 字体粗细  范围 100-900
+
+    font-weight: 700 ; 700等于bold 
+    
+    font-weight: 400 ; 400等于normal
+
+11，font-style:字体风格
+
+    html 中 斜体i 和 em
+
+    font-style: italic ; 字体斜体
+
+    font-style: normal ; 字体恢复
+
+
+12，font 的综合性写法
+
+    选择器{ font-style font-weight   font-size/line-height  font-family }
+
+    不能更换顺序，用空格隔开属性 
+    font : italic 700  20px "微软雅黑"
+
+    最后两个不能省
+
+13, css 外观属性
+    三种表示方法
+    green
+    #ff0000  用的较多 ，可以用吸管工具
+    rgb(255,0,0)
+
+14, text-align 文本水平时对齐方式
+
+    text-align : center;
+ 
+15， line-height:行间距
+
+    一般情况下， 行距比字号大 7，8 像素左右就可以了
+
+16,  段落首行缩进 text-indent:
+
+    em是一个字的距离 ，2em就是两个字的距离
+
+17，文本装饰
+    text-decoration :
+        none
+        bllink 闪烁
+        其他自己查
+
+
+
+
+
+
+
+
