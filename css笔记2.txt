@@ -1,0 +1,165 @@
+1, css复合选择器
+    更加准确的更加精细的选择目标标签
+    由两个或者多个基础选择器，通过不同方式组合而成
+
+    后代选择器 选择子孙后代
+    父亲 儿子 {属性 属性值 属性 属性值 。。。。}
+    .nav a{
+
+        color: pink;
+    }
+
+2, 子元素选择器
+    父亲 >儿子 {属性 属性值 属性 属性值 。。。。}
+    只会选择儿子
+    .nav > a{
+
+        color: pink;
+    }
+3, 交集选择器
+    即使p标签又是.red选择器的关系0
+   
+    p.red{
+        color: pink;
+    }
+    <p class = "red">红色</p>
+
+4，并集选择器
+
+    p和span标签 都进行变红 用逗号 隔开 加上逗号可以一直添加
+    p，span{
+        color:red;
+    }
+5，伪类选择器
+    例如链接伪类选择器
+
+    a:link 未访问过的链接
+    a:visited 已经访问过的链接
+    a:hover 鼠标经过链接时的状态
+    a:active 鼠标点击时的状态 鼠标按着没有松开的时候
+
+6，标签显示模式
+    div  一行一个
+    span  一行多个
+
+    块元素  
+
+     <h1~6>  <p>   <div>   <ol>  <ul>  <li>
+    独占一行  可以设置高度 和 宽度（默认父级宽度）
+    特殊情况：
+    <p>   段落标签不能含 块级元素
+    <h1~6>  <dt>标题标签 也尽量不要放 块级元素
+    
+    行内元素
+
+    <a> <stong> <b> <em> <i> <del> <s> <ins> <u> <span> 
+    高宽设置时无效的 （默认宽度就是就是本身内容宽度）
+
+    行内元素只能放 行内元素
+    特殊： 链接不能再放 链接 
+
+
+    行内块元素
+    <img /> <input/> <td/> 
+    可以设置宽高 
+    相邻行内块元素 在一行显示，但是之间会有缝隙 一行显示多个
+
+7, display三种显示模的转换
+
+    display :block ; 块元素 
+    display :inline; 行内元素
+    display :inline-block ; 行内块元素
+
+8，上下两行的基线距离 称为行高
+    单行文本垂直居中
+      
+    行高度 = 上距离 + 内容高度 + 下距离
+    行高等于 高度 文字会 垂直居中
+
+    单行：line-height
+    行高 大于 高度 偏下
+    行高 小于 高度 偏下
+
+9, css 背景
+    背景颜色 background-color
+        transparent 透明色  
+
+    背景图片 background-image ；url(链接) ；链接最好不要加引号
+
+    图片平铺 background-repeat: 
+
+        repeat 平铺（默认） 
+        no-repeat 不平铺
+
+        repeat-x 水平平铺
+        repeat-y 纵向平铺
+
+    背景位置 background-position 
+        先指定图片
+        background-image ；url(链接)
+        然后指定
+        background-position : x 坐标  y 坐标 (50px 30px)
+
+        方位名词或者坐标
+        方位名词 left top bottom right center ....
+
+        如果只指定一个 方位名词， 另一个居中表示
+        例如 ： 水平靠左 垂直居中
+        background-position：left center ;
+
+10， 背景附着
+    background-attachment :scoll || fixed;
+ 
+11, 背景简写  顺序无强制要求
+    background: 背景颜色 背景图片地址 背景平铺 背景滚动 背景位置
+    例如  
+    background: transparent url(...) no-repeat scoll center top
+
+12, 背景透明 （css3）
+
+    //半透明 最后一个代表透明度 低于ie9不支持
+    background: rgba(0,0,0,0.2);
+
+
+13，css 的三大特性
+    选择器相同 重叠性
+    选择器不同 优先级
+    层叠性
+        div{
+            color:blue;
+            font-size: 30px;
+        }
+        div{
+            color:green;
+        }
+        样式重叠时， 后面的会把前面的给 覆盖掉
+        例如上面 会显示30px的字体  green的颜色
+
+    继承性
+        降低css的复杂性
+        可以继承的样式 text-, font- , line- 以及color
+    优先级
+                              权重 
+        继承或者*            0，0，0，0    
+        标签选择器           0，0，0，1
+        类(伪类）选择器      0，0，1，0 
+        id选择器            0，1，0，0
+        行内样式            1，0，0，0
+        !import             无穷大     在样式后面添加
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
