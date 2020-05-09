@@ -1,0 +1,102 @@
+1 ,盒子模型
+    边框   border
+    内边距 padding  类似cellpadding
+    外边距 Margin   类似cellspacing
+
+    border-width 定义边框粗细，
+    border-style 边框样式
+    border-color 边框颜色
+
+    边框样式
+        none   没有边框忽略所有边框宽度
+        solid  边框为单位实线
+        dashed 边框为虚线
+        dotted 边框为点线
+    简写
+        border : border-width || border-style || border-color 
+        例如；
+        border : 5px dotted pink ;
+    边框可以分别指定 确定边框样式
+    例如：
+        border-top:2px solid pink;
+
+    合并相邻单元格的颜色
+        border-collapse: collapse;
+    
+    内边距
+        padding-left
+        padding-right
+        padding-top
+        padding-bottom
+    
+        简写
+        padding:
+        一个值： 按上－右－下－左的顺序作用于四边;
+        两个值： 第一个用于上－下，第二个用于左－右。
+        三个值： 第一个用于上，第二个用于左－右，第三个用于下。
+    盒子实际大小 = 内容宽度 高度 + 内边距 + 边框
+    如果 一个盒子没有宽度，  则padding 不会撑开盒子
+
+
+2 ，块级盒子水平居中
+    1.必须有宽度
+    2，左右auto
+    width=200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    也可以 margin：auto;
+    也可以 margin：0 auto;
+
+    text-align 文字，行内块元素 都能居中显示
+
+3，清除元素默认内外边距 (重要)
+    *{
+        margin:0;
+        padding:0;
+    }
+    行内元素最好只设置 左右边距 ，上下不要进行设置
+
+4，外边距合并 （外边距塌陷）垂直才会有，左右不会有问题
+
+    如果上下两个盒子的上下边距会取较大值
+    解决方案：尽量只给一个盒子给margin值
+
+    嵌套的内外边距合并(塌陷) 垂直外外边距解决方案 
+        1，给父亲定义上边框  transparent 透明
+        2，给父亲指定一个上 padding值
+        3，可以给父亲添加overflow:hidden
+5，盒子布局稳定性
+    优先使用 margin < padding < width
+
+6, 去掉列表默认的样式
+    li{
+            list-style: none;
+    }
+
+
+7, css3中的 可以做圆角边框  
+    border-radius: length; 半径  
+    border-radius:  50%; 直接画圆
+
+8，盒子阴影
+    box-shadow 水平阴影  垂直阴影 模糊距离（虚实） 阴影尺寸(影子大小) 阴影颜色 内/外阴影  
+    box-shadow：none | <shadow> [ , <shadow> ]*<shadow> = inset? && <length>{2,4} && <color>?
+    none： 无阴影 
+ 第1个长度值用来设置对象的阴影水平偏移值。可以为负值 
+ 第2个长度值用来设置对象的阴影垂直偏移值。可以为负值 
+ 如果提供了第3个长度值则用来设置对象的阴影模糊值。不允许负值 
+ 如果提供了第4个长度值则用来设置对象的阴影外延值。可以为负值 
+ 设置对象的阴影的颜色。 
+
+9, css规范
+    1，空格规范
+        选择器 与 { 之间必须 要有一个 空格
+        属性 和属性值 之间 最好 也要 包含 一个 空格
+
+    2，选择器 规范
+        并集选择器 每个选择器 必须 另起一行
+        一般情况下 选择器的 嵌套层数 应不大于 3 级，位置越靠后限定条件 尽可能的精确
+
+        属性定义 必须 自己一行
+         
